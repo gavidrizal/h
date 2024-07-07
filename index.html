@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warung Mama Rizal</title>
+    <link rel="stylesheet" href="stel.css" />
+  </head>
+  <body>
+    <h1>WARUNG MAMA RIZAL</h1>
+    <div id="login-section">
+      <h2>Login</h2>
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="app-section" style="display: none">
+      <div class="form-section">
+        <input type="text" id="kode" placeholder="Kode" />
+        <input type="text" id="nama" placeholder="Nama" />
+        <input type="number" id="jumlah" placeholder="Jumlah" />
+        <input type="date" id="tanggal" placeholder="dd/mm/yyyy" />
+        <input type="text" id="namaBarang" placeholder="Nama Barang" />
+        <button onclick="tambahHutang()">Tambah</button>
+      </div>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="search"
+          placeholder="Cari berdasarkan nama"
+          oninput="cariHutang()"
+        />
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Nama</th>
+            <th>Jumlah</th>
+            <th>Tanggal</th>
+            <th>Nama Barang</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="daftar-hutang"></tbody>
+      </table>
+    </div>
+
+    <script src="java.js"></script>
+  </body>
+</html>
